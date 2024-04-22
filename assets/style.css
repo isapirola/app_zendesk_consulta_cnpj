@@ -24,7 +24,7 @@ p {
     font-style: normal;
 }
 
-.form-cep {
+.form-cnpj {
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +34,7 @@ p {
     flex-direction: column;
 }
 
-#cep {
+#cnpj {
     height: 24px;
     margin-top: 6px;
     margin-bottom: 20px;

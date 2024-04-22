@@ -9,7 +9,7 @@ app.controller("AppController", [
             zendeskService
                 .consultarCnpj($scope.cnpj)
                 .then(function (response) {
-                    // Armazenar os dados do CNPJ na variável $scope.cepData
+                    // Armazenar os dados do CNPJ na variável $scope.cnpjData
                     $scope.cnpjData = response.data;
                 })
                 .catch(function (error) {
