@@ -13,24 +13,22 @@
 <body ng-app="app" ng-controller="AppController">
   <div id="container">
 
-    <h2 id="title">Consulta CEP</h1>
-      <form ng-submit="pesquisaCEP()">
+    <h2 id="title">Consulta CNPJ</h1>
+      <form ng-submit="pesquisaCNPJ()">
         <div class="form-item">
-          <label for="cep" id="label">Digite o CEP:</label>
-          <input type="text" ng-model="cep" id="cep" required />
+          <label for="cnpj" id="label">Digite o CNPJ:</label>
+          <input type="text" ng-model="cnpj" id="cnpj" required />
         </div>
         <div>
           <button type="submit" id="search">Pesquisar</button>
         </div>
       </form>
 
-      <div id="results" ng-if="cepData">
-        <p class="result">CEP: {{ cepData.cep }}</p>
-        <p class="result">Logradouro: {{ cepData.logradouro }}</p>
-        <p class="result">Complemento: {{ cepData.complemento }}</p>
-        <p class="result">Bairro: {{ cepData.bairro }}</p>
-        <p class="result">Cidade: {{ cepData.localidade }}</p>
-        <p class="result">Estado: {{ cepData.uf }}</p>
+      <div id="results" ng-if="cnpjData">
+        <p class="result">CNPJ: {{ cnpjData.cnpj }}</p>
+        <p class="result">Nome: {{ cnpjData.nome }}</p>
+        <p class="result">Situação: {{ cnpjData.situacao }}</p>
+        <p class="result">Data de abertura: {{ cnpjData.abertura }}</p>
       </div>
 
   </div>
