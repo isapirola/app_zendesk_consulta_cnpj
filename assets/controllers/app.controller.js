@@ -4,13 +4,13 @@ app.controller("AppController", [
     function ($scope, zendeskService) {
         var client = ZAFClient.init();
 
-        // Função para pesquisar dados do CEP
-        $scope.pesquisaCEP = function () {
+        // Função para pesquisar dados do CNPJ
+        $scope.pesquisaCNPJ = function () {
             zendeskService
-                .consultarCep($scope.cep)
+                .consultarCnpj($scope.cnpj)
                 .then(function (response) {
-                    // Armazenar os dados do CEP na variável $scope.cepData
-                    $scope.cepData = response.data;
+                    // Armazenar os dados do CNPJ na variável $scope.cepData
+                    $scope.cnpjData = response.data;
                 })
                 .catch(function (error) {
                     // Manipular erros aqui
