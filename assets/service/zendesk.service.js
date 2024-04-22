@@ -1,6 +1,6 @@
 app.service("zendeskService", function ($http) {
-    this.consultarCep = function (cep) {
-        var url = `https://viacep.com.br/ws/${cep}/json/`;
+    this.consultarCnpj = function (cep) {
+        var url = `https://receitaws.com.br/v1/cnpj/${cnpj}`;
         return $http.get(url);
     };
 });
