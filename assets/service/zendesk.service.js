@@ -8,7 +8,6 @@ app.service("zendeskService", function () {
         const options = {
             url: `https://receitaws.com.br/v1/cnpj/${cnpj}`,
             type: "GET",
-            cors: false,
         };
 
         return client.request(options);
