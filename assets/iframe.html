@@ -13,39 +13,39 @@
 <body ng-app="app" ng-controller="AppController">
   <div id="container">
 
-    <h2 id="title">Consulta CNPJ</h1>
-      <form id="form-cnpj" ng-submit="pesquisaCNPJ()">
-        <div class="form-item">
-          <label for="cnpj" id="label">Digite o CNPJ:</label>
-          <div id="input-and-button">
-            <input type="text" ng-model="cnpj" id="cnpj" required />
-            <button type="submit" id="search">Pesquisar</button>
-          </div>
+    <h2 id="title">Consulta CNPJ</h2>
+    <form id="form-cnpj" ng-submit="pesquisaCNPJ()">
+      <div class="form-item">
+        <label for="cnpj" id="label">Digite o CNPJ:</label>
+        <div id="input-and-button">
+          <input type="text" ng-model="cnpj" id="cnpj" required />
+          <button type="submit" id="search">Pesquisar</button>
         </div>
-      </form>
-
-      <div id="results" ng-if="cnpjData">
-        <table>
-          <tbody>
-            <tr>
-              <th scope="row">CNPJ</th>
-              <td>{{ cnpjData.cnpj }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Razão Social</th>
-              <td>{{ cnpjData.nome }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Situação</th>
-              <td>{{ cnpjData.situacao }}</td>
-            </tr>
-            <tr>
-              <th scope="row">Data de abertura</th>
-              <td>{{ cnpjData.abertura }}</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
+    </form>
+
+    <div id="results" ng-if="cnpjData">
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">CNPJ</th>
+            <td>{{ cnpjData.cnpj }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Razão Social</th>
+            <td>{{ cnpjData.nome }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Situação</th>
+            <td>{{ cnpjData.situacao }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Data de abertura</th>
+            <td>{{ cnpjData.abertura }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </div>
 
