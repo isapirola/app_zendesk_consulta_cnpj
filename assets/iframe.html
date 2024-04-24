@@ -14,13 +14,13 @@
   <div id="container">
 
     <h2 id="title">Consulta CNPJ</h1>
-      <form ng-submit="pesquisaCNPJ()">
+      <form id="form-cnpj" ng-submit="pesquisaCNPJ()">
         <div class="form-item">
           <label for="cnpj" id="label">Digite o CNPJ:</label>
-          <input type="text" ng-model="cnpj" id="cnpj" required />
-        </div>
-        <div>
-          <button type="submit" id="search">Pesquisar</button>
+          <div id="input-and-button">
+            <input type="text" ng-model="cnpj" id="cnpj" required />
+            <button type="submit" id="search">Pesquisar</button>
+          </div>
         </div>
       </form>
 
@@ -57,7 +57,7 @@
     // Initialise Apps framework client. See also:
     // https://developer.zendesk.com/apps/docs/developer-guide/getting_started
     var client = ZAFClient.init();
-    client.invoke('resize', { width: '100%', height: '400px' });
+    client.invoke('resize', { width: '100%', height: '350px' });
   </script>
 </body>
 
