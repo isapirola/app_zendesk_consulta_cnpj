@@ -25,10 +25,26 @@
       </form>
 
       <div id="results" ng-if="cnpjData">
-        <p class="result">CNPJ: {{ cnpjData.cnpj }}</p>
-        <p class="result">Nome: {{ cnpjData.nome }}</p>
-        <p class="result">Situação: {{ cnpjData.situacao }}</p>
-        <p class="result">Data de abertura: {{ cnpjData.abertura }}</p>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">CNPJ</th>
+              <td>{{ cnpjData.cnpj }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Razão Social</th>
+              <td>{{ cnpjData.nome }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Situação</th>
+              <td>{{ cnpjData.situacao }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Data de abertura</th>
+              <td>{{ cnpjData.abertura }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
   </div>
