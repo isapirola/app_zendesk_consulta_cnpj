@@ -1,6 +1,20 @@
 app.service("zendeskService", [
     "$q",
     function ($q) {
+        this.getCnpjFromOrganization = function () {
+            var deferred = $q.defer();
+            client
+                .get("ticket.requester")
+                .then(function (response) {
+                    deferred.resolve(response);
+                })
+                .catch(function (error) {
+                    deferred.reject(error);
+                });
+
+            return deferred.promise;
+        };
+
         this.consultarCnpj = function (cnpj) {
             var deferred = $q.defer();
             client
