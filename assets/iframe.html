@@ -24,7 +24,9 @@
       </div>
     </form>
 
-    <div id="results" ng-if="cnpjData">
+    <div id="error-message" ng-if="errorMessage">{{ errorMessage }}</div>
+
+    <div id="results" ng-if="cnpjData && !isEmptyObject(cnpjData)">
       <table>
         <tbody>
           <tr>
